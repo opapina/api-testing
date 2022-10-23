@@ -1,0 +1,76 @@
+[2022-10-23 09:51:56] [1] [INFO] [TestNG] Running:
+  C:\Users\Olga\AppData\Local\JetBrains\IdeaIC2022.1\temp-testng-customsuite.xml
+
+[2022-10-23 09:51:59] [1] [INFO] Request method:	GET
+Request URI:	https://api.github.com/users/opapina
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:			<none>
+HTTP/1.1 200 OK
+Server: GitHub.com
+Date: Sun, 23 Oct 2022 21:51:59 GMT
+Content-Type: application/json; charset=utf-8
+Cache-Control: public, max-age=60, s-maxage=60
+Vary: Accept, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"168b8e1553657fbb5463d6cfedc8fb285773bc279e8bdd2ebed875c0bf59fed2"
+Last-Modified: Thu, 06 Oct 2022 09:44:12 GMT
+X-GitHub-Media-Type: github.v3; format=json
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'none'
+Content-Encoding: gzip
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 56
+X-RateLimit-Reset: 1666563988
+X-RateLimit-Resource: core
+X-RateLimit-Used: 4
+Accept-Ranges: bytes
+Content-Length: 436
+X-GitHub-Request-Id: BFDF:DD1C:6DFED67:6FBAE74:6355B77E
+
+{
+    "login": "opapina",
+    "id": 111037803,
+    "node_id": "U_kgDOBp5Naw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/111037803?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/opapina",
+    "html_url": "https://github.com/opapina",
+    "followers_url": "https://api.github.com/users/opapina/followers",
+    "following_url": "https://api.github.com/users/opapina/following{/other_user}",
+    "gists_url": "https://api.github.com/users/opapina/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/opapina/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/opapina/subscriptions",
+    "organizations_url": "https://api.github.com/users/opapina/orgs",
+    "repos_url": "https://api.github.com/users/opapina/repos",
+    "events_url": "https://api.github.com/users/opapina/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/opapina/received_events",
+    "type": "User",
+    "site_admin": false,
+    "name": null,
+    "company": null,
+    "blog": "",
+    "location": null,
+    "email": null,
+    "hireable": null,
+    "bio": null,
+    "twitter_username": null,
+    "public_repos": 3,
+    "public_gists": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2022-08-11T04:58:50Z",
+    "updated_at": "2022-10-06T09:44:12Z"
+}
+
