@@ -1,11 +1,16 @@
-package com.solvd.apitesting;
+package com.solvd.apitesting.domain;
 
 import java.security.SecureRandom;
 
 public class User {
 
     private String userName;
-    private SecureRandom token;
+    private String token;
+
+    public User(String userName, String token) {
+        this.userName = userName;
+        this.token = token;
+    }
 
     public String getUserName() {
         return userName;
@@ -15,11 +20,11 @@ public class User {
         this.userName = userName;
     }
 
-    public SecureRandom getToken() {
+    public String getToken() {
         return token;
     }
 
-    public void setToken(SecureRandom token) {
+    public void setToken(String token) {
         this.token = token;
     }
 }

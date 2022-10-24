@@ -1,11 +1,12 @@
-package com.solvd.apitesting;
+package com.solvd.apitesting.method;
 
 import com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2;
 import com.qaprosoft.carina.core.foundation.utils.Configuration;
 
-public class PostUserKey extends AbstractApiMethodV2 {
-    public PostUserKey(String rqPath, String rsPath) {
-        super(rsPath, rqPath);
+public class GetUserMethod extends AbstractApiMethodV2 {
+
+    public GetUserMethod(String rqPath, String rsPath) {
+        super(rqPath, rsPath);
         replaceUrlPlaceholder("base_url", Configuration.getEnvArg("url"));
     }
 }

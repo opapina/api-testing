@@ -1,4 +1,4 @@
-package com.solvd.apitesting;
+package com.solvd.apitesting.method;
 
 import com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2;
 import com.qaprosoft.carina.core.foundation.utils.Configuration;
