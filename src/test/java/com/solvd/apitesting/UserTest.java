@@ -1,8 +1,9 @@
 package com.solvd.apitesting;
 
+import com.qaprosoft.apitools.validation.JsonComparatorContext;
 import com.solvd.apitesting.method.GetUserCommitMethod;
 import com.solvd.apitesting.method.GetUserMethod;
-import com.solvd.apitesting.method.GetUserRepoIssuesMethod;
+import com.solvd.apitesting.method.GetUserRepoIssueMethod;
 import org.testng.annotations.Test;
 
 public class UserTest {
@@ -23,8 +24,11 @@ public class UserTest {
 
     @Test(testName = "verify that GET return information of issues")
     public void verifyGetUserRepoIssuesTest() {
-        GetUserRepoIssuesMethod getUserRepoIssuesMethod = new GetUserRepoIssuesMethod();
-        getUserRepoIssuesMethod.callAPI();
-        getUserRepoIssuesMethod.validateResponse();
+        GetUserRepoIssueMethod getUserRepoIssueMethod = new GetUserRepoIssueMethod();
+        getUserRepoIssueMethod.callAPI();
+        JsonComparatorContext comparatorContext = JsonComparatorContext.context()
+                .<Integer>withPredicate("open_issues", issueNumber -> issueNumber > 45)
+                .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-25"));
+        getUserRepoIssueMethod.validateResponse(comparatorContext);
     }
 }

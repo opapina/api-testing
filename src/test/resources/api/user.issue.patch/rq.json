@@ -1,0 +1,5 @@
+{"title":"Found a bug",
+  "body":"I'm having an issue in this block",
+  "assignees":["opapina"],
+  "milestone":1,
+  "labels":["bug"]}

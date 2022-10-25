@@ -16,6 +16,7 @@
         <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.0.0-M7</maven.surefire.plugin.version>
         <carina.api.version>8.0.0</carina.api.version>
+        <testng.version>7.6.1</testng.version>
     </properties>
 
     <dependencies>

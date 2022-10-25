@@ -1,11 +1,5 @@
-[
-//  { "Authorization": "Bearer <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>"},
   {"title":"Found a bug",
-    "owner": "${user_name}",
-    "repo": "${repo_name}",
-    "body":"I'm having a problem with this.",
-    "assignees":["octocat"],
-    "milestone":1,
-    "labels":["bug"]
-  }
-  ]
+  "body":"I'm having a problem with this.",
+  "assignees":["opapina"],
+  "milestone":1,
+  "labels":["bug"]}
