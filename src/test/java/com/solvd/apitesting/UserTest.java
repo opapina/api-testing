@@ -28,7 +28,7 @@ public class UserTest {
         getUserRepoIssueMethod.callAPI();
         JsonComparatorContext comparatorContext = JsonComparatorContext.context()
                 .<Integer>withPredicate("open_issues", issueNumber -> issueNumber > 45)
-                .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-25"));
+                .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-26"));
         getUserRepoIssueMethod.validateResponse(comparatorContext);
     }
 }

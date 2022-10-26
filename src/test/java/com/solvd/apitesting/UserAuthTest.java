@@ -14,7 +14,7 @@ public class UserAuthTest {
     public void verifyPostUserIssueCreateTest() {
         PostUserIssueMethod postUserIssueMethod = new PostUserIssueMethod( "api/user.issue.post/rs.json");
         postUserIssueMethod.setHeaders("Accept=application/json");
-        postUserIssueMethod.setHeaders("Authorization=Bearer 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");
+        postUserIssueMethod.setHeaders("Authorization=Bearer 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");
         postUserIssueMethod.expectResponseStatus(HttpResponseStatusType.CREATED_201);
         postUserIssueMethod.callAPI();
         JsonComparatorContext comparatorContext = JsonComparatorContext.context()
@@ -22,31 +22,31 @@ public class UserAuthTest {
                 .<String>withPredicate("url", url -> url.contains("https://api.github.com/repos/opapina/hmsbase/issues/"))
                 .<Integer>withPredicate("number", number -> number > 40)
                 .<Integer>withPredicate("open_issue", issueNumber -> issueNumber > 40)
-                .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-25"));
+                .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-26"));
         postUserIssueMethod.validateResponse(comparatorContext);
     }
 
     @Test(testName = "check that issue will be lock")
     public void verifyPatchUserIssueMethod() {
         PatchUserIssueMethod patchUserIssueMethod = new PatchUserIssueMethod();
-        patchUserIssueMethod.setHeaders("Authorization=Bearer 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");
+        patchUserIssueMethod.setHeaders("Authorization=Bearer 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");
         patchUserIssueMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
         patchUserIssueMethod.callAPI();
         JsonComparatorContext comparatorContext = JsonComparatorContext.context()
                 .<Integer>withPredicate("open_issues", issueNumber -> issueNumber > 49)
-                .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-25"));
+                .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-26"));
         patchUserIssueMethod.validateResponse(comparatorContext);
     }
 
     @Test(testName = "check that milestone for hmsbase will be created")
     public void verifyPostUserMilestoneMethod() {
         PostUserMilestonesMethod postUserMilestonesMethod = new PostUserMilestonesMethod();
-        postUserMilestonesMethod.setHeaders("Authorization=Bearer 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");
+        postUserMilestonesMethod.setHeaders("Authorization=Bearer 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");
         postUserMilestonesMethod.expectResponseStatus(HttpResponseStatusType.CREATED_201);
-        postUserMilestonesMethod.addProperty("number", "8");
+        postUserMilestonesMethod.addProperty("number", "13");
         postUserMilestonesMethod.callAPI();
         JsonComparatorContext comparatorContext = JsonComparatorContext.context()
-                .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-25"));
+                .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-26"));
         postUserMilestonesMethod.validateResponse(comparatorContext);
     }
 }
