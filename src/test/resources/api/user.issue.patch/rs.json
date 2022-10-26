@@ -1,13 +1,13 @@
 {
-  "url": "https://api.github.com/repos/opapina/hmsbase/issues/50",
+  "url": "https://api.github.com/repos/opapina/hmsbase/issues/48",
   "repository_url": "https://api.github.com/repos/opapina/hmsbase",
-  "labels_url": "https://api.github.com/repos/opapina/hmsbase/issues/50/labels{/name}",
-  "comments_url": "https://api.github.com/repos/opapina/hmsbase/issues/50/comments",
-  "events_url": "https://api.github.com/repos/opapina/hmsbase/issues/50/events",
-  "html_url": "https://github.com/opapina/hmsbase/issues/50",
-  "id": 1422630801,
-  "node_id": "I_kwDOH7jbxs5Uy5-R",
-  "number": 50,
+  "labels_url": "https://api.github.com/repos/opapina/hmsbase/issues/48/labels{/name}",
+  "comments_url": "https://api.github.com/repos/opapina/hmsbase/issues/48/comments",
+  "events_url": "https://api.github.com/repos/opapina/hmsbase/issues/48/events",
+  "html_url": "https://github.com/opapina/hmsbase/issues/48",
+  "id": 1422618838,
+  "node_id": "I_kwDOH7jbxs5Uy3DW",
+  "number": 48,
   "title": "Found a bug",
   "user": {
     "login": "opapina",
@@ -41,7 +41,7 @@
     }
   ],
   "state": "open",
-  "locked": false,
+  "locked": true,
   "assignee": {
     "login": "opapina",
     "id": 111037803,
@@ -122,15 +122,15 @@
     "closed_at": null
   },
   "comments": 0,
-  "created_at": "2022-10-25T15:11:50Z",
-  "updated_at": "2022-10-25T15:11:51Z",
+  "created_at": "2022-10-25T15:03:30Z",
+  "updated_at": "predicate:isTodayDateTime",
   "closed_at": null,
   "author_association": "OWNER",
-  "active_lock_reason": null,
-  "body": "I'm having a problem with this.",
+  "active_lock_reason": "off-topic",
+  "body": "I'm having an issue in this block",
   "closed_by": null,
   "reactions": {
-    "url": "https://api.github.com/repos/opapina/hmsbase/issues/50/reactions",
+    "url": "https://api.github.com/repos/opapina/hmsbase/issues/48/reactions",
     "total_count": 0,
     "+1": 0,
     "-1": 0,
@@ -141,7 +141,7 @@
     "rocket": 0,
     "eyes": 0
   },
-  "timeline_url": "https://api.github.com/repos/opapina/hmsbase/issues/50/timeline",
+  "timeline_url": "https://api.github.com/repos/opapina/hmsbase/issues/48/timeline",
   "performed_via_github_app": null,
   "state_reason": null
 }
