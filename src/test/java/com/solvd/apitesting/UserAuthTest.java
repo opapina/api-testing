@@ -2,6 +2,8 @@ package com.solvd.apitesting;
 
 import com.qaprosoft.apitools.validation.JsonComparatorContext;
 import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
+import com.qaprosoft.carina.core.foundation.utils.Configuration;
+import com.qaprosoft.carina.core.foundation.utils.R;
 import com.solvd.apitesting.method.PostUserIssueMethod;
 import com.solvd.apitesting.method.PatchUserIssueMethod;
 import com.solvd.apitesting.method.PostUserMilestonesMethod;
@@ -13,8 +15,9 @@ public class UserAuthTest {
     @Test(testName = "check that it's possible to create a https://api.github.com/repos/{owner}/{repo}/issues")
     public void verifyPostUserIssueCreateTest() {
         PostUserIssueMethod postUserIssueMethod = new PostUserIssueMethod( "api/user.issue.post/rs.json");
-        postUserIssueMethod.setHeaders("Accept=application/json");
-        postUserIssueMethod.setHeaders("Authorization=Bearer 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");
+        postUserIssueMethod.setHeaders(R.CONFIG.get("token"));
+        postUserIssueMethod.addProperty("username", "opapina");
+        postUserIssueMethod.addProperty("reponame", "hmsbase");
         postUserIssueMethod.expectResponseStatus(HttpResponseStatusType.CREATED_201);
         postUserIssueMethod.callAPI();
         JsonComparatorContext comparatorContext = JsonComparatorContext.context()
@@ -29,7 +32,7 @@ public class UserAuthTest {
     @Test(testName = "check that issue will be lock")
     public void verifyPatchUserIssueMethod() {
         PatchUserIssueMethod patchUserIssueMethod = new PatchUserIssueMethod();
-        patchUserIssueMethod.setHeaders("Authorization=Bearer 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");
+        patchUserIssueMethod.setHeaders(R.CONFIG.get("token"));
         patchUserIssueMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
         patchUserIssueMethod.callAPI();
         JsonComparatorContext comparatorContext = JsonComparatorContext.context()
@@ -41,9 +44,11 @@ public class UserAuthTest {
     @Test(testName = "check that milestone for hmsbase will be created")
     public void verifyPostUserMilestoneMethod() {
         PostUserMilestonesMethod postUserMilestonesMethod = new PostUserMilestonesMethod();
-        postUserMilestonesMethod.setHeaders("Authorization=Bearer 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");
+        postUserMilestonesMethod.setHeaders(R.CONFIG.get("token"));
         postUserMilestonesMethod.expectResponseStatus(HttpResponseStatusType.CREATED_201);
-        postUserMilestonesMethod.addProperty("number", "13");
+        postUserMilestonesMethod.addProperty("username", "opapina");
+        postUserMilestonesMethod.addProperty("reponame", "hmsbase");
+        postUserMilestonesMethod.addProperty("number", "20");
         postUserMilestonesMethod.callAPI();
         JsonComparatorContext comparatorContext = JsonComparatorContext.context()
                 .<String>withPredicate("isTodayDateTime", datetime -> datetime.startsWith("2022-10-26"));
